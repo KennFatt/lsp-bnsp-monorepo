@@ -1,0 +1,25 @@
+### Create new record into the DB (test untuk record #1)
+POST http://localhost:3030/productioncost
+Content-Type: application/json
+
+{
+    "fixedCost": 6000000,
+    "totalCost": 6000000
+}
+
+### Retrieve all the records
+GET http://localhost:3030/productioncost
+
+### Retrieve a record
+GET http://localhost:3030/productioncost/1
+
+### Update a record
+PATCH http://localhost:3030/productioncost/1
+Content-Type: application/json
+
+{
+    "marginalCost": 123
+}
+
+### Delete a record
+DELETE http://localhost:3030/productioncost/1
